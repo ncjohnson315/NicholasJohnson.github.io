@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sting Data Analysis and Tableau Dashboard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Back to Main</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/ncjohnson315/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://ncjohnson315.github.io/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Excel Data Analysis<br />
+									and Tableau Dashboard</h1>
+									<p>Analyzing the career of wrestling icon Sting in Excel in order to create an interactive Tableau dashboard.</p>
+								</header>
+								<div class='tableauPlaceholder' id='viz1649085927540' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;TheICONSting&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='TheICONSting&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;TheICONSting&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1649085927540');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='900px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='900px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1327px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+								<p></p>
+								<header>
+									<h2>Data Collection and Cleaning in Excel</h2>
+									<p>Data was collected from various sources and copied into an Excel spreadsheet. From there, data required various cleaning procedures and transformations.</p>
+								</header>
+								<dl>
+									<dt>Date Formatting</dt>
+									<dd>
+										<p>Dates were formatted into yyyy-mm-dd format.</p>
+									</dd>
+									<dt>Time Duration Formatting</dt>
+									<dd>
+										<p>Time duration was formatted into hh:mm:ss format, and an additional column was calculated for total time duration in seconds.</p>
+									</dd>
+									<dt>Geographic Location Formatting</dt>
+									<dd>
+										<p>Geographic location was split from one column into three columns (city, state/province, country). Some data was also in German, which had to be filtered and translated.</p>
+									</dd>
+									<dt>Separation and Distinction of Opponents and Teammates</dt>
+									<dd>
+										<p>Various wording was used to distinguish opponents from teammates in the original data. Therefore, several transformations were used with different delimiters, left/right functions, etc. to split the information into two columns (opponents and teammates).</p>
+									</dd>
+									<dt>Other Cleaning Procedures</dt>
+									<dd>
+										<p>Data was trimmed of whitespace, spelling errors were corrected, missing data was found (when possible), and capitalization of data was corrected.</p>
+									</dd>
+								</dl>
+								<p></p>
+								<header>
+									<h2>Data Analysis in Excel</h2>
+									<p>Data was analyzed using pivot tables to determine which information would be best suited for the dashboard.</p>
+								</header>
+								<ul>
+									<li>Total matches by promotion</li>
+									<li>Total matches by state/province</li>
+									<li>Total matches by event type</li>
+									<li>Total matches by opponent</li>
+									<li>Average time duration of matches</li>
+								</ul>
+								<p></p>
+								<header>
+									<h2>Tableau Dashboard</h2>
+									<p>Data was then imported into Tableau for the creation of the dashboard.</p>
+								</header>
+								<dl>
+									<dt>Table Representing Win-Loss Records by Promotions</dt>
+									<dd>
+										<p>Table was created using the Result column grouped by the Promotion column, with Count of Total Matches text added, filtering out any <i>null</i> result values, and sorting by decreasing Count of Total Matches.</p>
+									</dd>
+									<dt>Map Representing Total Matches by State/Province</dt>
+									<dd>
+										<p>Map was created using the State/Province column, with the Count of Total Matches color added, and adjusting the color legend due to much higher counts in Florida and Georgia than any other geographic area.</p>
+									</dd>
+									<dt>Stacked Bar Chart Representing Total Matches by Year by Event Type</dt>
+									<dd>
+										<p>Stacked bar chart was created using Count of Total Matches row, with Year column, Event Type color added, and adjusted the Event Type legend manually so that more important match types were on top.</p>
+									</dd>
+									<dt>Butterfly Chart Representing Total Matches by Opponent and Average Match Time Duration</dt>
+									<dd>
+										<p>Butterfly chart was created using Total Matches and Time Duration columns, Opponent row, filtering Opponent by top 10 by Count of Total Matches, adding a <b>context filter</b> by Promotion, and sorting by decreasing Count of Total Matches.</p>
+										<p>There were several null values in the time duration column which impacted the butterfly chart. This was fixed by creating a calculated field using the code below:</p>
+										<pre><code>IF ZN(AVG([Duration Sec]))=0
+THEN 0.0001
+ELSE ZN(AVG([Duration Sec]))
+END</code></pre>
+									<p>Then a <b>Constant Line</b> was utilized to keep the butterfly chart from misformatting itself with this small data point in place of the null. It was made transparent and utilized to keep the chart labels in place when null data was present.</p>
+									</dd>
+									<dt>Creating the Dashboard</dt>
+									<dd>
+										<p>The Dashboard was then created with these sheets, utilizing the Promotion filter from the Butterfly Chart to filter all of the sheets except the table. A graphic of Sting's autograph was added near the title for visual effect.</p>
+									</dd>
+								</dl>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="split contact">
+						<section class="alt">
+							<h3>Location</h3>
+							<p>Syracuse, NY</p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">ncjohnson315@gmail.com</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/ncjohnson315" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+			<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				</div>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+</body>
+</html>
